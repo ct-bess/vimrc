@@ -10,7 +10,7 @@ set colorcolumn=90
 set relativenumber
 
 set shiftwidth=2   " 2 Space warrior
-set tabstop=4      " Tab 4 spaces
+set tabstop=1      " Tab 1 space (for >>'s)
 
 set showmatch     " curly boy matcher
 set mat=2         " how many tenths of a second to blink for matching
