@@ -9,8 +9,15 @@ set ffs=unix,mac,dos
 set colorcolumn=90
 set relativenumber
 
+" turn tabs into spaces
+set expandtab
 set shiftwidth=2   " 2 Space warrior
-set tabstop=1      " Tab 1 space (for >>'s)
+set softtabstop=2
+
+set noautoindent
+set nocindent
+set nosmartindent
+set indentexpr=
 
 set showmatch     " curly boy matcher
 set mat=2         " how many tenths of a second to blink for matching
