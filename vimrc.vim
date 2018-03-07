@@ -1,10 +1,14 @@
 " YEE
+" TODO Random colorscheme upon startup
 
 filetype on
 syntax on
 colorscheme industry
 set encoding=utf8
 set ffs=unix,mac,dos
+
+" set nocompatible
+set showcmd         " Shows what cmd your typing
 
 set colorcolumn=90
 set relativenumber
@@ -69,6 +73,7 @@ set statusline+=\ %P     " percentage through file
 set statusline+=%4*
 set statusline+=\ 0x%04B " character under cursor
 
+" Counts the words in a LaTeX file, detex will ignore the macros
 function! WC()
   let filename = expand("%")
   let cmd = "detex " . filename . " | wc -w | tr -d [:space:]"
