@@ -14,6 +14,7 @@ set expandtab
 set shiftwidth=2   " 2 Space warrior
 set softtabstop=2
 
+set mouse=         " pesky little thing
 set noautoindent
 set nocindent
 set nosmartindent
@@ -68,3 +69,11 @@ set statusline+=\ %P     " percentage through file
 set statusline+=%4*
 set statusline+=\ 0x%04B " character under cursor
 
+function! WC()
+  let filename = expand("%")
+  let cmd = "detex " . filename . " | wc -w | tr -d [:space:]"
+  let result = system(cmd)
+  echo result . " words"
+endfunction
+
+command WC call WC()
