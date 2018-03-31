@@ -26,7 +26,8 @@ set indentexpr=
 
 set showmatch     " curly boy matcher
 set mat=2         " how many tenths of a second to blink for matching
-" set hlsearch
+" set hlsearch      " search highlighting
+set incsearch     " show match while search
 set hidden
 set history=100   " Sets how many lines of history vim remembers
 
@@ -38,6 +39,14 @@ set wildmenu
 set ruler          " Always show current position
 set lazyredraw     " Don't redraw while macroing (performance)
 set magic          " Regex
+
+" Essential
+map <f9> IIm Gay<esc>
+
+" The nuke
+" map <f8> ggDiYEET<esc>j500dd:wq<return>
+
+" set makeprg        " progress
 
 " Always show the status line
 set laststatus=2
@@ -73,6 +82,16 @@ set statusline+=\ %P     " percentage through file
 set statusline+=%4*
 set statusline+=\ 0x%04B " character under cursor
 
+let mapleader = "`"
+let g:mapleader = "`"
+
+" find selection from * or #
+" vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
+" vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
+
+" imap <leader>pf printf(  );<left><left><left>
+" imap <leader>in #include <><left>
+
 " Counts the words in a LaTeX file, detex will ignore the macros
 function! WC()
   let filename = expand("%")
@@ -82,3 +101,34 @@ function! WC()
 endfunction
 
 command WC call WC()
+
+" Search for cword and replace w/input() under cursor for all open buffers
+fun! Replace()
+  let s:word = input("Replace " . expand('<cword>') . " with:")
+  :exe 'bufdo! %s/\<' . expand('<cword>') . '\>/' . s:word . '/ge'
+  :unlet! s:word
+endfun
+
+map <leader>r :call Replace()<CR>
+
+" open error console
+map <leader>cc :botright cope<CR>
+" move to next error
+map <leader>] :cn<CR>
+" move to prev error
+map <leader>[ :cp<CR>
+
+" ---------------------------------------------------------------------------------
+" Programming Specific
+" ---------------------------------------------------------------------------------
+
+" generate header guard
+fun! HeaderGuard()
+  let basename = substitute(bufname(""), '.*/', '', '')
+  let guard = substitute(toupper(basename), '\.', '_', "H")
+  call append(0, "#ifndef " . guard)
+  call append(1, "#define " . guard)
+  call append( line("$"), "#endif // for #ifndef " . guard )
+endfun
+
+map <leader>g :call HeaderGuard()<CR>
