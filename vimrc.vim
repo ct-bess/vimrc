@@ -41,7 +41,7 @@ set lazyredraw     " Don't redraw while macroing (performance)
 set magic          " Regex
 
 " Essential
-map <f9> IIm Gay<esc>
+map <f9> IYEET<esc>
 
 " The nuke
 " map <f8> ggDiYEET<esc>j500dd:wq<return>
