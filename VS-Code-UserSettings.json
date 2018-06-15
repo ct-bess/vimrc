@@ -1,0 +1,33 @@
+{
+    "vim.autoindent": true,
+    "vim.history": 100,
+    "vim.incsearch": true,
+    "vim.showcmd": true,
+    "vim.surround": true,
+    "vim.showmodename": true,
+    "vim.cursorStylePerMode": {
+        "normal": "block",
+        "insert": "block-outline",
+        "replace": "line",
+        "visual": "block",
+        "visualline": "block",
+        "visualblock": "block"
+    },
+    "vim.visualstar": true,
+    "vim.mouseSelectionGoesIntoVisualMode": false,
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": ["Z", "Z"],
+            "after": [],
+            "commands": [
+                {
+                    "command": ":wq",
+                    "args": []
+                },
+            ]
+        }
+    ],
+    "editor.lineNumbers":"relative",
+    "editor.cursorBlinking": "solid",
+    "workbench.colorTheme": "Monokai",
+}
