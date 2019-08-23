@@ -1,11 +1,18 @@
 " YEE
-" TODO Random colorscheme upon startup
 
 filetype on
 syntax on
 colorscheme industry
 set encoding=utf8
 set ffs=unix,mac,dos
+
+" Cursor Shape
+" EI --> else , SI --> insert
+let &t_SI.="\e[2 q"
+let &t_EI.="\e[2 q"
+" Cursor Coloer
+let &t_SI="\e]12;cyan\x7"
+let &t_EI="\e]12;orange\x7"
 
 " set nocompatible
 set showcmd         " Shows what cmd your typing
