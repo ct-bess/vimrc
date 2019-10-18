@@ -1,33 +1,52 @@
 {
-    "vim.autoindent": true,
-    "vim.history": 100,
-    "vim.incsearch": true,
-    "vim.showcmd": true,
-    "vim.surround": true,
-    "vim.showmodename": true,
-    "vim.cursorStylePerMode": {
-        "normal": "block",
-        "insert": "block-outline",
-        "replace": "line",
-        "visual": "block",
-        "visualline": "block",
-        "visualblock": "block"
-    },
-    "vim.visualstar": true,
-    "vim.mouseSelectionGoesIntoVisualMode": false,
-    "vim.otherModesKeyBindingsNonRecursive": [
-        {
-            "before": ["Z", "Z"],
-            "after": [],
-            "commands": [
-                {
-                    "command": ":wq",
-                    "args": []
-                },
-            ]
-        }
-    ],
-    "editor.lineNumbers":"relative",
-    "editor.cursorBlinking": "solid",
-    "workbench.colorTheme": "Monokai",
+  /* A Very Good Settings.json */
+
+  "workbench.settings.editor": "json",
+  "workbench.colorTheme": "Monokai",
+  "workbench.editor.showTabs": true,
+  "workbench.editor.tabSizing": "fit",
+
+  "window.title": "YES.",
+
+  "editor.lineNumbers": "relative",
+  "editor.cursorBlinking": "solid",
+  "editor.glyphMargin": false,
+  "editor.folding": false,
+  "editor.minimap.renderCharacters": false,
+  "editor.wordWrap": "on",
+  "editor.useTabStops": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.lightbulb.enabled": false,
+  "editor.parameterHints.enabled": false,
+  "editor.selectionHighlight": false,
+  "editor.occurrencesHighlight": false,
+  "editor.codeLens": false,
+
+  "editor.autoClosingBrackets": "never",
+  "editor.autoClosingQuotes": "never",
+  "html.autoClosingTags": false,
+  "javascript.autoClosingTags": false,
+  "javascript.suggest.completeFunctionCalls": false,
+
+  "breadcrumbs.enabled": false,
+
+  "screencastMode.verticalOffset": 90,
+
+  "vim.highlightedyank.enable": true,
+  "vim.cursorStylePerMode.insert": "block-outline",
+  "vim.cursorStylePerMode.normal": "block",
+  "vim.cursorStylePerMode.replace": "block",
+  "vim.cursorStylePerMode.visual": "block",
+  "vim.cursorStylePerMode.visualblock": "block",
+  "vim.cursorStylePerMode.visualline": "block",
+  "vim.autoindent": true,
+  "vim.history": 100,
+  "vim.incsearch": true,
+  "vim.showcmd": true,
+  "vim.surround": true,
+  "vim.showmodename": true,
+  "vim.visualstar": true,
+  "vim.mouseSelectionGoesIntoVisualMode": false,
+
 }
